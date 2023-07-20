@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">  
+
+</head>
+<body>
+<!-- BMI FORM SECTION -->
+    <section>
+        <div class="container">
+            <h1 id="title">Kalkulator BMI</h1>
+            <p>
+                Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga       menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+            </p>  
+                <form id="myForm" class="box-form">
+                    <div>
+                        <label for="jeniskel">Jenis Kelamin :</label><br>
+                        <input type="radio" id="pria" name="jeniskel" value="Pria">
+                        <label for="jeniskel">Pria</label>
+                    
+                        <input type="radio" id="wanita" name="jeniskel" value="Wanita">
+                        <label for="jeniskel">Wanita</label>
+                        <p id="allertGender" class="allert"></p>
+                    
+                        <label for="bb">Berat Badan (kg) :</label><br>
+                        <input class="input" id="bb" type ="number" min="1" max="100" maxlength="3" name="beratbadan" placeholder="80">
+                        <p id="allertBB" class="allert"></p>
+                    
+                        <label for="usia">Usia (tahun) :</label><br>
+                        <input class="input" id="usia"  type="number" min="1" max="100" maxlength="3" name="usia" placeholder="20">
+                        <p id="allertUsia" class="allert"></p>
+                    
+                        <label for="tb">Tinggi Badan (cm) :</label><br>
+                        <input class="input" id="tb" type="number" min="100" max="1000" maxlength="4" name="tinggibadan" placeholder="150">
+                        <p id="allertTB" class="allert"></p>
+
+                        <button type ="submit" id="hitung">Hitung BMI</button>
+                        <input type="button" onclick="resetForm()" value="Reset">
+                    </div>
+                </form>
+            
+                <h2>Keunggulan fitur</h2>
+                <ol class="list">
+                    <li>
+                        Menghitung berat badan
+                    </li>
+                    <li>
+                        Menentukan kategori berat badan ideal atau tidak
+                    </li>
+                    <li>
+                        Mempersiapkan program penurunan berat badan
+                    </li>
+                </ol>
+            
+                <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini)      dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti      dokter.</p>
+                <p>Kalkulator akan memberi Anda gambaran tentang perbandinagn berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI)        dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M^2.</p>
+        </div>
+<!-- BMI FORM SECTION END -->
+
+<!-- BMI RESULT SECTION -->
+    </section>
+        <div class="container">
+            <h1 id="title">Hasil</h1>
+            <div class="box-result">
+                <P id="genderOutput" class="result-content"></P>
+                <p id="weightStatus" class="result-content"></p>
+                <p id="bmiResultOutput" class="result-content"></p>
+            </div>
+            <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+        </div>
+<!-- BMI RESULT SECTION END -->
+
+<script src="js/script.js"></script>
+</body>
+</html>
